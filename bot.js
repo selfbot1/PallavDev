@@ -48,7 +48,7 @@ client.on("message", (message) => {
   // and not get into a spam loop (we call that "botception").
   if(message.author.bot) return;
   console.log(message.server.name)
-  if(!message.member.roles.some(r=>["Administrator", "Moderator", "Admin].includes(r.name)) )
+  if(!message.member.roles.some(r=>["Administrator", "Moderator", "Admin"].includes(r.name)) )
         return ;  // Also good practice to ignore any message that does not start with our prefix, 
   // which is set in the configuration file.
   if(message.content.indexOf(config.prefix) !== 0) return;
