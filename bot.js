@@ -135,7 +135,7 @@ client.on("message", (message) => {
       return ;
       
     // get the delete count, as an actual number.
-    const deleteCount = parseInt(args[0], 10);
+    const deleteCount = parseInt(args[0], 10) + 1;
     message.channel.fetchMessages({limit: deleteCount}).then(messages => message.channel.bulkDelete(messages));
 
    }
