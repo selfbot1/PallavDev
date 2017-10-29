@@ -156,7 +156,7 @@ client.on("message", (message) => {
       msg.edit("👀");
       i++;
       }
-      )}
+      })
                                       /*
        var i = 0;
         while (i < 5) {
