@@ -150,13 +150,10 @@ client.on("message", (message) => {
       msg.edit("👀");
       i++;
       }
-      })
+      )}
+    
 }                           /*
-       var i = 0;
-        while (i < 5) {
-          client.updateMessage(message, '👀`');
-          client.updateMessage(message, '<:eyesflipped:374001007497052172>`');
-          i++;*/
+       
   }
    if (command === "help") {
     message.channel.send("The commands for this bot are: ping | say | kick | ban | purge | eyes ");}
