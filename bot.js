@@ -166,11 +166,11 @@ client.on("message", (message) => {
 }                           
   if (command === "avatar" || command === 'avi') {
     let member = message.mentions.members.first();
-    if(!member)
+    if(!member);
       return message.reply("Please mention a member of this server.");
   // Send the user's avatar URL
     message.reply(member.avatarURL);
-  }
+  
 });
    if (command === "help") {
     message.channel.send("The commands for this bot are: ping | say | kick | ban | purge | eyes ");}
