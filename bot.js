@@ -154,7 +154,7 @@ client.on("message", (message) => {
       while (i < 5) {
       msg.edit('<:eyesflipped:374001007497052172>')
       msg.edit("👀");
-      1++;
+      i++;
       }
       )}
                                       /*
