@@ -171,7 +171,7 @@ client.on("message", (message) => {
   // Send the user's avatar URL
     message.reply(member.avatarURL);
   
-});
+}
    if (command === "help") {
     message.channel.send("The commands for this bot are: ping | say | kick | ban | purge | eyes ");}
 });
