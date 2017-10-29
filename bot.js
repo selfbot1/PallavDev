@@ -9,7 +9,7 @@ client.on('ready', () => {
 });
 
 client.on('message', message => {
-    console.log(message.author.if);
+    console.log(message.author.id);
 
     if(message.author.id !== config.ownerID) return;
 
