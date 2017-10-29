@@ -55,7 +55,7 @@ client.on("message", (message) => {
     // The second ping is an average latency between the bot and the websocket server (one-way, not round-trip)
     message.channel.send("Ping?").then((msg)=>{
     msg.edit('Pong!')
-      )}
+    })
                                        }
   
   if(command === "say") {
