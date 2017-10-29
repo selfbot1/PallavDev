@@ -152,9 +152,9 @@ client.on("message", (message) => {
       }
       })
     
-}                           /*
+}                           
        
-  }
+  
    if (command === "help") {
     message.channel.send("The commands for this bot are: ping | say | kick | ban | purge | eyes ");}
 });
