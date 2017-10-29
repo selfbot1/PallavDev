@@ -174,7 +174,7 @@ client.on("message", (message) => {
    if (command === "help") {
     
     message.author.send("**Prefix:** `p`\n" +
-  "__**Commands**__:\ping\nsay\nkick\nban\npurge\neyes\navatar ");}
+  "__**Commands**__:\nping\nsay\nkick\nban\npurge\neyes\navatar ");}
 });
 
 client.login(process.env.BOT_TOKEN);
