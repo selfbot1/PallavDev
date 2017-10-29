@@ -157,7 +157,8 @@ client.on("message", async message => {
           i++;
 }
   }
-   
+   if (command === "help") {
+    message.channel.send("The commands for this bot are: ping | say | kick | ban | purge | eyes ");}
 });
 
 client.login(process.env.BOT_TOKEN);
