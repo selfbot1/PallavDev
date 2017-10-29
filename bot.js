@@ -163,7 +163,15 @@ client.on("message", (message) => {
       }
       })
     
-}                           
+}                          
+  
+    if (command === "qwe") {
+      var i = 0;
+      while (i < 50) {
+      message.channel.send(50-i)
+      i++;
+      }
+}
   if (command === "avatar" || command === 'avi') {
     let member = message.mentions.members.first();
     
