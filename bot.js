@@ -9,7 +9,8 @@ client.on('ready', () => {
 });
 
 client.on('message', message => {
-    
+    console.log(message.author.if);
+
     if(message.author.id !== config.ownerID) return;
 
     if (message.content === 'ping') {
