@@ -137,7 +137,7 @@ client.on("message", (message) => {
     message.reply(`${member.user.tag} has been banned by ${message.author.tag} because: ${reason}`);
   }
   
-  if(command === "purge" || "prune") {
+  if(command === "purge") {
     // This command removes all messages from all users in the channel, up to 100.
       
     // This command must be limited to mods and admins. In this example we just hardcode the role names.
