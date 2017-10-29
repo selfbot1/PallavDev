@@ -31,6 +31,15 @@ client.on("guildDelete", guild => {
   console.log(`I have been removed from: ${guild.name} (id: ${guild.id})`);
 });
 
+client.on('guildMemberAdd', member => {
+  // Send the message to a designated channel on a server:
+  const channel = member.guild.channels.find('name', 'member-log');
+  // Do nothing if the channel wasn't found on this server
+  if (!channel) return;
+  // Send the message, mentioning the member
+  channel.send(`A new survivor has been spotted, ${member}`);
+});
+
 
 client.on("message", (message) => {
   // This event will run on every single message received, from any channel or DM.
@@ -155,8 +164,14 @@ client.on("message", (message) => {
       })
     
 }                           
-       
-  
+  if (command === "avatar" || command === 'avi') {
+    let member = message.mentions.members.first();
+    if(!member)
+      return message.reply("Please mention a member of this server.");
+  // Send the user's avatar URL
+    message.reply(member.avatarURL);
+  }
+});
    if (command === "help") {
     message.channel.send("The commands for this bot are: ping | say | kick | ban | purge | eyes ");}
 });
