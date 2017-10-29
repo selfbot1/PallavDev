@@ -137,7 +137,7 @@ client.on("message", (message) => {
     message.reply(`${member.user.tag} has been banned by ${message.author.tag} because: ${reason}`);
   }
   
-  if(command === "purge") {
+  if(command === "purge" || "prune" ||) {
     // This command removes all messages from all users in the channel, up to 100.
       
     // This command must be limited to mods and admins. In this example we just hardcode the role names.
@@ -173,8 +173,8 @@ client.on("message", (message) => {
 }
    if (command === "help") {
     
-    message.author.send("The prefix for this bot is: `p`\n " +
-  "The commands for this bot are: ping | say | kick | ban | purge | eyes ");}
+    message.author.send("**Prefix:** `p`\n" +
+  "__**Commands**__:\ping\nsay\nkick\nban\npurge\neyes\navatar ");}
 });
 
 client.login(process.env.BOT_TOKEN);
