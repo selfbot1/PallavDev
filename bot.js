@@ -5,9 +5,13 @@ const config = require("./config.json");
 
 client.on('ready', () => {
     console.log('I am ready!');
+    console.log(config.ownerID);
+
 });
 
 client.on('message', message => {
+    console.log(message.author.id);
+
     if(message.author.id !== config.ownerID) return;
 
     if (message.content === 'ping') {
