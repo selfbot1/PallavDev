@@ -73,7 +73,7 @@ client.on("message", (message) => {
       let channel = client.channels.get(targetchannel);
       channel.send(text);}
     else{
-       message.channel.send(origtext);}
+       message.channel.send(sayMessage);}
   }
   
   if(command === "kick") {
