@@ -166,8 +166,7 @@ client.on("message", (message) => {
 }                           
   if (command === "avatar" || command === 'avi') {
     let member = message.mentions.members.first();
-    if(!member);
-      return message.reply("Please mention a member of this server.");
+    
   // Send the user's avatar URL
     message.reply(member.avatarURL);
   
