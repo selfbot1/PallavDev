@@ -53,8 +53,9 @@ client.on("message", (message) => {
   if(command === "ping") {
     // Calculates ping between sending a message and editing it, giving a nice round-trip latency.
     // The second ping is an average latency between the bot and the websocket server (one-way, not round-trip)
-    message.channel.send("Ping?");
-    client.updateMessage(message, 'Pong!')  }
+    message.channel.send("Ping?").then((msg)=>{
+    msg.edit('Pong!')
+      )}
   
   if(command === "say") {
     // makes the bot say something and delete the message. As an example, it's open to anyone to use. 
@@ -147,14 +148,20 @@ client.on("message", (message) => {
   if(command === "eyes") {
       //This command send emoji the looks left and read
       
-       message.channel.send("👀");
-       client.updateMessage(message, '<:eyesflipped:374001007497052172>`');
+      message.channel.send("👀").then((msg)=>{
+      var i = 0;
+      while (i < 5) {
+      msg.edit('<:eyesflipped:374001007497052172>')
+      msg.edit("👀");
+      1++;
+      }
+      )}
+                                      /*
        var i = 0;
         while (i < 5) {
           client.updateMessage(message, '👀`');
           client.updateMessage(message, '<:eyesflipped:374001007497052172>`');
-          i++;
-}
+          i++;*/
   }
    if (command === "help") {
     message.channel.send("The commands for this bot are: ping | say | kick | ban | purge | eyes ");}
