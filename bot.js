@@ -97,7 +97,7 @@ client.on("message", (message) => {
       return message.reply("Please indicate a reason for the kick!");
     
     // Now, time for a swift kick in the nuts!
-    await member.kick(reason)
+    member.kick(reason)
       .catch(error => message.reply(`Sorry ${message.author} I couldn't kick because of : ${error}`));
     message.reply(`${member.user.tag} has been kicked by ${message.author.tag} because: ${reason}`);
 
@@ -119,7 +119,7 @@ client.on("message", (message) => {
     if(!reason)
       return message.reply("Please indicate a reason for the ban!");
     
-    await member.ban(reason)
+    member.ban(reason)
       .catch(error => message.reply(`Sorry ${message.author} I couldn't ban because of : ${error}`));
     message.reply(`${member.user.tag} has been banned by ${message.author.tag} because: ${reason}`);
   }
@@ -141,14 +141,14 @@ client.on("message", (message) => {
       return message.reply("Please provide a number between 2 and 100 for the number of messages to delete");
     
     // So we get our messages, and delete them. Simple enough, right?
-    const fetched = await message.channel.fetchMessages({count: deleteCount});
+    const fetched = message.channel.fetchMessages({count: deleteCount});
     message.channel.bulkDelete(fetched)
       .catch(error => message.reply(`Couldn't delete messages because of: ${error}`));
   }
   if(command === "eyes") {
       //This command send emoji the looks left and read
       
-       const m = await message.channel.send("👀");
+       const m = message.channel.send("👀");
        m.edit(`<:eyesflipped:374001007497052172>`);
        var i = 0;
         while (i < 5) {
