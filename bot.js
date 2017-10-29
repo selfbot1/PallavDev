@@ -172,7 +172,9 @@ client.on("message", (message) => {
   
 }
    if (command === "help") {
-    message.channel.send("The commands for this bot are: ping | say | kick | ban | purge | eyes ");}
+    
+    message.author.send("The prefix for this bot is: `p`" +
+  "The commands for this bot are: ping | say | kick | ban | purge | eyes ");}
 });
 
 client.login(process.env.BOT_TOKEN);
