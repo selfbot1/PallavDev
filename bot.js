@@ -151,7 +151,7 @@ client.on("message", (message) => {
       i++;
       }
       })
-                                      /*
+}                           /*
        var i = 0;
         while (i < 5) {
           client.updateMessage(message, '👀`');
