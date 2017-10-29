@@ -150,7 +150,7 @@ client.on("message", (message) => {
       msg.edit("👀");
       i++;
       }
-      )}
+      })
     
 }                           /*
        
