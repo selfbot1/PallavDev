@@ -173,7 +173,7 @@ client.on("message", (message) => {
 }
    if (command === "help") {
     
-    message.author.send("The prefix for this bot is: `p`" +
+    message.author.send("The prefix for this bot is: `p`\n " +
   "The commands for this bot are: ping | say | kick | ban | purge | eyes ");}
 });
 
