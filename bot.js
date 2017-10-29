@@ -54,7 +54,7 @@ client.on("message", (message) => {
     // Calculates ping between sending a message and editing it, giving a nice round-trip latency.
     // The second ping is an average latency between the bot and the websocket server (one-way, not round-trip)
     message.channel.send("Ping?");
-    client.updateMessage(message, Pong!  }
+    client.updateMessage(message, 'Pong!')  }
   
   if(command === "say") {
     // makes the bot say something and delete the message. As an example, it's open to anyone to use. 
