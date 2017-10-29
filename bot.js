@@ -139,7 +139,7 @@ client.on("message", (message) => {
     message.channel.fetchMessages({limit: deletecount}).then(messages => message.channel.bulkDelete(messages));
 
    }
-  }
+  
   if(command === "eyes") {
       //This command send emoji the looks left and read
       
