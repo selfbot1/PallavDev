@@ -12,7 +12,7 @@ client.on("ready", () => {
   // Example of changing the bot's playing game to something useful. `client.user` is what the
   // docs refer to as the "ClientUser".
   client.user.setGame("n!help", "https://go.twitch.tv/pallavbs"); // a game
-  client.user.setStatus("online"); // Set status to DnD
+  client.user.setStatus("oflinne"); // Set status to DnD
 
 });
 
