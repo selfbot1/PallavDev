@@ -175,8 +175,7 @@ client.on("message", (message) => {
   
 }
    if (command === "help") {
-    message.delete(); 
-    message.author.send("**Prefix:** `p`\n" +
+    message.author.send("**Prefix:** `n!`\n" +
   "__**Commands**__:\nping\nsay\nkick\nban\npurge\neyes\navatar ");}
 });
 
