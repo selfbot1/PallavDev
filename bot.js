@@ -152,7 +152,7 @@ client.on("message", (message) => {
       message.channel.send("👀").then((msg)=>{
       var i = 0;
       while (i < 50) {
-      msg.edit('<:eyesflipped:374082394816249856>')
+      msg.edit('<:eyes:374082394816249856>')
       msg.edit("👀");
       i++;
       }
